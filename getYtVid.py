@@ -46,6 +46,7 @@ if args.url:
 elif args.path:
     urls = readFile(args.path)
     for url in urls:
+        url = url.split("&")[0]
         download_video(url)
 else:
     print("Arguments missing. Check -h for help.")
